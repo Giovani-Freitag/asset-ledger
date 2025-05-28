@@ -1,54 +1,61 @@
-# React + TypeScript + Vite
+# AssetLedger
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Deploy](https://img.shields.io/github/deployments/giovani-freitag/asset-ledger/github-pages?label=live%20demo)](https://giovani-freitag.github.io/asset-ledger/)
 
-Currently, two official plugins are available:
+**AssetLedger** é uma aplicação web open source para consolidação e análise de investimentos, focada em usuários que investem através da B3.  
+Permite importar seu extrato de operações em CSV ou XLSX, visualizar todas as movimentações, calcular posições, rendimentos e facilitar a declaração anual do Imposto de Renda.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Funcionalidades principais
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Importação rápida do extrato B3:** Suporta arquivos CSV e XLSX.
+- **Visualização detalhada do extrato:** Veja todas as transações de compra, venda, proventos, transferências e mais, em tabela dinâmica.
+- **Cálculo automático de posições e rendimentos:** Em breve, consulte sua carteira consolidada, proventos recebidos e relatórios anuais.
+- **Preparação para IR:** Ferramentas para facilitar a conferência e geração de dados para declaração.
+- **Tema claro/escuro automático**
+- **Interface 100% local:** Nenhum dado é enviado para servidores, tudo processado no navegador.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Como usar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Acesse a aplicação online em:  
+   👉 **[AssetLedger Live](https://giovani-freitag.github.io/asset-ledger/)**
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. Importe seu extrato B3:  
+   - Baixe seu extrato de operações no site da B3 (formato .csv ou .xlsx).
+   - Arraste o arquivo ou clique na área destacada na página inicial para carregar.
+
+3. Visualize suas movimentações:  
+   - Vá para a página **Extrato** para ver todas as operações em tabela.
+   - Em breve, acesse a carteira consolidada e relatórios de rendimento.
+
+
+## Desenvolvimento
+
+Clone este repositório, instale as dependências e rode localmente:
+
+```bash
+git clone https://github.com/giovani-freitag/asset-ledger.git
+cd asset-ledger
+npm install
+npm run dev
+````
+
+
+## Deploy
+
+O deploy está automatizado via GitHub Actions para GitHub Pages, disponível sempre em:
+**[https://giovani-freitag.github.io/asset-ledger/](https://giovani-freitag.github.io/asset-ledger/)**
+
+
+## Roadmap
+
+* [x] Importação de extratos CSV/XLSX
+* [x] Visualização de extrato completo
+* [ ] Consolidação de carteira
+* [ ] Relatórios anuais de rendimentos
+* [ ] Exportação para IR
+* [ ] Mais filtros e análises
+
+
+> Projeto mantido por [Giovani Freitag](https://github.com/giovani-freitag), para fins de estudo, portfolio e como utilitário prático para investidores pessoa física.
