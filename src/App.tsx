@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
-import History from './pages/History';
+import Statement from './pages/Statement';
 import IR from './pages/IR';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -16,7 +16,7 @@ function App() {
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/portfolio" element={<Portfolio />} />
-                        <Route path="/history" element={<History />} />
+                        <Route path="/statement" element={<Statement />} />
                         <Route path="/ir" element={<IR />} />
                     </Routes>
                 </main>

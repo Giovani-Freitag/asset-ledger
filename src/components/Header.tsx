@@ -16,7 +16,7 @@ export default function Header({ githubUrl }: { githubUrl: string }) {
                                 <Link className="nav-link" to="/portfolio">Carteira</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/history">Histórico</Link>
+                                <Link className="nav-link" to="/statement">Extrato</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/ir">IR</Link>
