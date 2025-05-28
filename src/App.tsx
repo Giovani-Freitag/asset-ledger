@@ -8,9 +8,11 @@ import Footer from './components/Footer';
 import packageJson from '../package.json';
 import { StatementProvider } from './context/StatementContext';
 
+const basename = import.meta.env.BASE_URL;
+
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename={basename}>
             <StatementProvider>
                 <div className="d-flex flex-column min-vh-100">
                     <Header githubUrl={packageJson.repository} />
