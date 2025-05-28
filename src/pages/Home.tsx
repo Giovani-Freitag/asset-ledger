@@ -1,11 +1,17 @@
 import FileDropBox from '../components/FileDropBox';
 import { importStatement } from '../services/importStatement';
+import { useStatement } from '../context/StatementContext';
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
+    const { setStatement } = useStatement();
+    const navigate = useNavigate();
+
     function handleFile(file: File) {
         importStatement(file)
-            .then(rawData => {
-                console.log(rawData);
+            .then(data => {
+                setStatement(data);
+                navigate('/statement');
             })
             .catch(err => {
                 alert('Erro ao importar arquivo: ' + err);
