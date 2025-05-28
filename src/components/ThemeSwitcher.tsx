@@ -33,7 +33,7 @@ export default function ThemeSwitcher() {
     return (
         <div className="dropdown" ref={ref}>
             <button
-                className="btn dropdown-toggle"
+                className="btn dropdown-toggle text-body-secondary"
                 type="button"
                 onClick={() => setOpen((o) => !o)}
                 aria-expanded={open}

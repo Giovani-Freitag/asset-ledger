@@ -13,17 +13,23 @@ export default function Header({ githubUrl }: { githubUrl: string }) {
                     <nav>
                         <ul className="nav">
                             <li className="nav-item">
-                                <Link className="nav-link" to="/portfolio">Carteira</Link>
+                                <Link className="nav-link text-body-secondary" to="/portfolio">Carteira</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/statement">Extrato</Link>
+                                <Link className="nav-link text-body-secondary" to="/statement">Extrato</Link>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" to="/ir">IR</Link>
+                                <Link className="nav-link text-body-secondary" to="/ir">IR</Link>
                             </li>
                         </ul>
                     </nav>
-                    <a href={githubUrl} target="_blank" rel="noopener noreferrer" className="fs-4 ms-2">
+                    <a
+                        href={githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-body-secondary fs-5"
+                        title="Ver no GitHub"
+                    >
                         <i className="bi bi-github"></i>
                     </a>
                     <ThemeSwitcher />
