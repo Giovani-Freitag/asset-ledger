@@ -9,7 +9,6 @@ import packageJson from '../package.json';
 import { StatementProvider } from './context/StatementContext';
 
 const basename = import.meta.env.BASE_URL;
-console.log(basename);
 function App() {
     return (
         <BrowserRouter basename={basename}>
